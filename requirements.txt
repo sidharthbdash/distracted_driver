@@ -3,7 +3,7 @@ pandas
 streamlit
 retry
 numpy
-opencv-python-headless<=4.2
+opencv-python-headless
 matplotlib
 keras
 tensorflow
