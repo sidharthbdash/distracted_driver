@@ -28,10 +28,7 @@ def predict(path):
     # img_array = np.array(image)
     img = cv2.imread(path)
     # Reduce size
-    try:
-        img1 = cv2.resize(img, (100, 100), cv2.INTER_LINEAR)
-    except:
-        print("error")
+    img1 = cv2.resize(img, (100, 100), cv2.INTER_LINEAR)
     st.write("Initially, the uploaded image is resized to a particular resolution i.e. 100x100.")
     st.image(img1)
     st.text("(100x100)")
