@@ -48,11 +48,11 @@ def predict(path):
     test_data = test_data.astype('float16')   
    
     # model=train_model_5()
-    json_file = open('/content/drive/MyDrive/testing_sid/model.json', 'r')
+    json_file = open('model.json', 'r')
     loaded_model_json = json_file.read()
     json_file.close()
     model = model_from_json(loaded_model_json)
-    weights_path = os.path.join("/content/drive/MyDrive/testing_sid/weights_5.h5")
+    weights_path = os.path.join("weights_5.h5")
     model.load_weights(weights_path)
 
     test_prediction = model.predict(test_data,verbose=1)
@@ -84,7 +84,7 @@ if image is not None:
   st.image(image)
   with open('img','wb') as f:
     f.write(image.read())
-  path2 = os.path.join('/content', 'img')
+  path2 = os.path.join('./img')
   img,result=predict(path2)
   plt.title('the prediction is '+result)
   plt.imshow(img)
