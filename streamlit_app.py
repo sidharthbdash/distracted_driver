@@ -72,7 +72,7 @@ st.sidebar.text("Dr. Sanjit Kumar Dash")
 if st.button("Explore the data:"):
     link="<span >The dataset is provided by <a style='text-decoration: none;' href='https://www.kaggle.com/c/state-farm-distracted-driver-detection/submissions?sortBy=date&group=successful&page=1'>Kaggle State Farm.</a></span>"
     st.markdown(link, unsafe_allow_html=True)
-    img_list = pd.read_csv('/content/drive/MyDrive/testing_sid/driver_imgs_list.csv')
+    img_list = pd.read_csv('driver_imgs_list.csv')
     img_list['class_type'] = img_list['classname'].str.extract('(\\d)',expand=False).astype(float)
     img_list.hist('class_type',alpha=0.5,layout=(1,1),bins=9)
     img_list
