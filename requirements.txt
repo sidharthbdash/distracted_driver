@@ -3,6 +3,6 @@ pandas
 streamlit
 retry
 numpy
-opencv-python
+opencv-python-headless
 matplotlib
 keras
