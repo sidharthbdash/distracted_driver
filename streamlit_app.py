@@ -26,10 +26,6 @@ def predict(path):
     # img=mpimg.imread(image)
     #fl = os.path.basename(path)
     # img_array = np.array(image)
-    import socket   
-    hostname = socket.gethostname()   
-    IPAddr = socket.gethostbyname(hostname)
-    print(hostname,IPAddr)
     st.write(hostname)
     img = cv2.imread(path)
     # Reduce size
