@@ -29,6 +29,8 @@ def predict(path):
     import socket   
     hostname = socket.gethostname()   
     IPAddr = socket.gethostbyname(hostname)
+    print(hostname,IPAddr)
+    st.write(hostname)
     img = cv2.imread(path)
     # Reduce size
     img1 = cv2.resize(img, (100, 100), cv2.INTER_LINEAR)
