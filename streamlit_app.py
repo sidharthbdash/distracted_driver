@@ -26,7 +26,6 @@ def predict(path):
     # img=mpimg.imread(image)
     #fl = os.path.basename(path)
     # img_array = np.array(image)
-    st.write(hostname)
     img = cv2.imread(path)
     # Reduce size
     img1 = cv2.resize(img, (100, 100), cv2.INTER_LINEAR)
